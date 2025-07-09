@@ -9,7 +9,7 @@
     "dev": "nodemon index.js"
   },
   "keywords": [],
-  "author": "Your Name",
+  "author": "Ajitesh Dasgupta",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^3.0.2",
