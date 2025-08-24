@@ -6,7 +6,7 @@ const NewCollections = () => {
   const [newCollections, setNewCollections] = useState([]);
 
   useEffect(() => {
-    fetch(`${process.env.backEndUrl}/api/products`)
+    fetch(`${process.env.REACT_APP_BACKEND_URL}/api/products`)
       .then((res) => res.json())
       .then((data) => {
         const shuffled = [...data].sort(() => 0.5 - Math.random()).slice(0, 8); // last 8 items

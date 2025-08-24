@@ -6,7 +6,7 @@ const ShopCategory = (props) => {
   const [shopCategory, setShopCategory] = useState([]);
 
   useEffect(() => {
-    fetch(`${process.env.backEndUrl}/api/products?category=${props.category}`)
+    fetch(`${process.env.REACT_APP_BACKEND_URL}/api/products?category=${props.category}`)
       .then((res) => res.json())
       .then((data) => {
         const sorted = [...data].sort((a, b) => b.id - a.id);

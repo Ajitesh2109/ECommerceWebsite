@@ -12,7 +12,7 @@ const LoginSignUp = () => {
   const handleSubmit = async () => {
     try {
       if (isLogin) {
-        const res = await axios.post(`${process.env.backEndUrl}/api/auth/login`, {
+        const res = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/auth/login`, {
           email,
           password,
         });
@@ -20,7 +20,7 @@ const LoginSignUp = () => {
         alert("Logged in successfully!");
         window.location.href = "/";
       } else {
-        await axios.post(`${process.env.backEndUrl}/api/auth/register`, {
+        await axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/auth/register`, {
           name,
           email,
           password,

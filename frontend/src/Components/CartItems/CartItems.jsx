@@ -25,7 +25,7 @@ const CartItems = () => {
     }));
 
     try {
-      const res = await fetch(`${process.env.backEndUrl}/api/orders`, {
+      const res = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/orders`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

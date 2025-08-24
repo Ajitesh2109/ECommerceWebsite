@@ -6,7 +6,7 @@ const RelatedProducts = ({ category, currentProductId }) => {
   const [relatedProducts, setRelatedProducts] = useState([]);
 
   useEffect(() => {
-    fetch(`${process.env.backEndUrl}/api/products`)
+    fetch(`${process.env.REACT_APP_BACKEND_URL}/api/products`)
       .then((res) => res.json())
       .then((data) => {
         const filtered = data.filter(
