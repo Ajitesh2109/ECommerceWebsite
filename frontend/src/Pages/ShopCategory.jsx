@@ -6,7 +6,7 @@ const ShopCategory = (props) => {
   const [shopCategory, setShopCategory] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/api/products?category=${props.category}`)
+    fetch(`https://ecommercewebsite-n94k.onrender.com/api/products?category=${props.category}`)
       .then((res) => res.json())
       .then((data) => {
         const sorted = [...data].sort((a, b) => b.id - a.id);

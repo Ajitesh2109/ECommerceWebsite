@@ -6,7 +6,7 @@ const Popular = () => {
   const [popularProducts, setPopularProducts] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/products")
+    fetch("https://ecommercewebsite-n94k.onrender.com/api/products")
       .then((res) => res.json())
       .then((data) => {
         const filtered = data.filter((item) => item.category === "women");
