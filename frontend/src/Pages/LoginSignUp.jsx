@@ -12,7 +12,7 @@ const LoginSignUp = () => {
   const handleSubmit = async () => {
     try {
       if (isLogin) {
-        const res = await axios.post("https://ecommercewebsite-n94k.onrender.com/api/auth/login", {
+        const res = await axios.post(`${process.env.backEndUrl}/api/auth/login`, {
           email,
           password,
         });
@@ -20,7 +20,7 @@ const LoginSignUp = () => {
         alert("Logged in successfully!");
         window.location.href = "/";
       } else {
-        await axios.post("https://ecommercewebsite-n94k.onrender.com/api/auth/register", {
+        await axios.post(`${process.env.backEndUrl}/api/auth/register`, {
           name,
           email,
           password,

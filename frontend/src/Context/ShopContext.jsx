@@ -7,7 +7,7 @@ const ShopContextProvider = (props) => {
   const [cartItems, setCartItems] = useState({});
 
   useEffect(() => {
-    fetch("https://ecommercewebsite-n94k.onrender.com/api/products")
+    fetch(`${process.env.backEndUrl}/api/products`)
       .then((res) => res.json())
       .then((data) => {
         setProducts(data);

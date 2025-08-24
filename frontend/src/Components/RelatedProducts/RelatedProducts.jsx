@@ -6,7 +6,7 @@ const RelatedProducts = ({ category, currentProductId }) => {
   const [relatedProducts, setRelatedProducts] = useState([]);
 
   useEffect(() => {
-    fetch("https://ecommercewebsite-n94k.onrender.com/api/products")
+    fetch(`${process.env.backEndUrl}/api/products`)
       .then((res) => res.json())
       .then((data) => {
         const filtered = data.filter(

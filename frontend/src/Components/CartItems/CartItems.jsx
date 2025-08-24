@@ -25,7 +25,7 @@ const CartItems = () => {
     }));
 
     try {
-      const res = await fetch("https://ecommercewebsite-n94k.onrender.com/api/orders", {
+      const res = await fetch(`${process.env.backEndUrl}/api/orders`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
