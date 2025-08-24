@@ -2,6 +2,7 @@ import { pool, poolConnect } from '../db.js';
 
 const getProduct = async (req, res) => {
   await poolConnect;
+  console.log("geetting products");
   const category = req.query.category;
 
   try {

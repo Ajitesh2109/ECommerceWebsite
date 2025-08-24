@@ -1,11 +1,10 @@
 import mssql from "mssql";
 
 const config = {
-  user: "ecommerce_user",
-  password: "ronniejojo",
-  server: "127.0.0.1",
-  instanceName: "SQLEXPRESS",
-  database: "EComWebsiteDB",
+  user: "ajitesh2109_EComWebsite",
+  password: "r0nniej0j0",
+  server: "sql.bsite.net\\MSSQL2016",
+  database: "ajitesh2109_EComWebsite",
   options: {
     encrypt: false,
     trustServerCertificate: true,
